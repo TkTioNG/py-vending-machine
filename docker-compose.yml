@@ -1,0 +1,14 @@
+version: "3"
+services:
+  machine:
+    tty: true
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    expose:
+      - 8088
+    ports:
+      - 8088:8088
+    env_file: .env
